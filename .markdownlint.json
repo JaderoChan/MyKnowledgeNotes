@@ -1,4 +1,7 @@
 {
     "MD013": false,
     "MD060": false,
+    "no-duplicate-heading": {
+        "siblings_only": true
+    }
 }
