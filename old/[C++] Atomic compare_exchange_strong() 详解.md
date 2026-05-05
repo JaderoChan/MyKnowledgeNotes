@@ -3,8 +3,8 @@
 ## 签名
 
 ```cpp
- bool compare_exchange_strong(T& expected, T desired,
-                              std::memory_order order = std::memory_order_seq_cst);
+bool compare_exchange_strong(T& expected, T desired,
+    std::memory_order order = std::memory_order_seq_cst);
 ```
 
 ## 作用
@@ -19,14 +19,17 @@
 ## 典型用法
 
 ```cpp
- std::atomic<int> val{1};
- int expected = 1;
- 
- if (val.compare_exchange_strong(expected, 2)) {
-     // 成功：val 从 1 变成了 2
- } else {
-     // 失败：expected 现在是 val 的实际值
- }
+std::atomic<int> val{1};
+int expected = 1;
+
+if (val.compare_exchange_strong(expected, 2))
+{
+    // 成功：val 从 1 变成了 2
+}
+else
+{
+    // 失败：expected 现在是 val 的实际值
+}
 ```
 
 ## 与 `compare_exchange_weak` 的区别
