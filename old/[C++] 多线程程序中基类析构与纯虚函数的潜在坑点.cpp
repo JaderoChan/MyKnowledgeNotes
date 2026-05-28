@@ -44,7 +44,7 @@ private:
 class Derived : public Base
 {
 public:
-    Derived() = default
+    Derived()
     {
         start();
     }
