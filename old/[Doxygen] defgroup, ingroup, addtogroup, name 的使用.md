@@ -1,4 +1,4 @@
-# [Doxygen] defgroup, ingroup, addtogroup 的使用
+# [Doxygen] defgroup, ingroup, addtogroup 的使用 *
 
 在 Doxygen 里，`\\defgroup`、`\\ingroup`、`\\addtogroup` 都是**分组文档**的核心命令，用来把函数/类/文件组织成模块。
 
