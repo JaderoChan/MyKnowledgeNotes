@@ -289,9 +289,9 @@ def update_bs2():
 # Main loop #
 #############
 
-def train(max_iter, eps):
+def train(epoch, eps):
     last_loss = float('inf')
-    while (max_iter):
+    while (epoch):
         # Forward propagation
         comp_zs1()
         comp_hs()
@@ -310,7 +310,7 @@ def train(max_iter, eps):
         if (math.fabs(curr_loss - last_loss) < eps):
             break
         last_loss = curr_loss
-        max_iter -= 1
+        epoch -= 1
 
 def identify():
     # Forward propagation
