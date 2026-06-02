@@ -197,10 +197,10 @@ deltas2 : list          # (\delta_k)
 ###########
 
 def sigmoid(x):
-    return 1.0 / (1.0 + math.exp(e, -x))
+    return 1.0 / (1.0 + math.exp(-x))
 
 def sigmoid_deriv(x):
-    return math.exp(e, -x) / math.exp(1.0 + math.exp(e, -x), 2)
+    return math.exp(-x) / math.pow(1.0 + math.exp(-x), 2)
 
 def loss():
     # assert ys.size() == labels.size()
@@ -246,9 +246,9 @@ def comp_ys():
 
     exp_sum = 0.0
     for k in range(r):
-        exp_sum += math.exp(e, zs2[k] - max_z)
+        exp_sum += math.exp(zs2[k] - max_z)
     for k in range(r):
-        ys[k] = math.exp(e, zs2[k] - max_z) / exp_sum
+        ys[k] = math.exp(zs2[k] - max_z) / exp_sum
 
 ####################
 # Back propagation #
