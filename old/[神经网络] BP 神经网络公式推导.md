@@ -191,7 +191,6 @@ ys      : list          # Output nodes value (\hat{y}_k)
 deltas1 : list          # (\delta_j)
 deltas2 : list          # (\delta_k)
 
-
 ###########
 # Utility #
 ###########
